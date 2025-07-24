@@ -1,3 +1,48 @@
-.disclaimer{
-    background-color: purple;
+@import '../../App.scss';
+
+
+footer {
+    background-color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    div {
+        h4 {
+            margin-bottom: 1rem;
+            font-size: 1;
+            font-weight: 400;
+            font-family: 'Roboto Flex', sans-serif;
+
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                font-family: 'Roboto Flex', sans-serif;
+                font-size: 1;
+                font-weight: 400;
+                font-family: 'Roboto Flex', sans-serif;
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: #242424;
+                    transition: 200ms ease-in-out;
+                    border-bottom: transparent solid 1px;
+
+                    &:hover {
+                        color: #C52525;
+                        border-bottom: #C52525 solid 1px;
+                        letter-spacing: 3px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
 }

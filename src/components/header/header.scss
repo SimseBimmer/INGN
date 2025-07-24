@@ -1,0 +1,49 @@
+@import '../../App.scss';
+
+header {
+        background-color: #ffffff;
+
+        #HeaderContainer {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            #HeaderLogo {
+                font-size: 48px;
+                letter-spacing: 2px;
+                font-family: 'Righteous', cursive;
+                transition: 200ms ease-in-out;
+
+                a {
+                    color: #C52525;
+                    text-decoration: none;
+                }
+            }
+
+            #HeaderLogo:hover {
+                cursor: pointer;
+                scale: 1.2;
+                opacity: .8;
+            }
+
+            #LoginMenu {
+                margin: auto 0;
+                height: 100%;
+                display: flex;
+                gap: 1.5rem;
+
+                img, a {
+                    width: 100%;
+                    transition: 200ms ease-in-out;
+                }
+
+
+                img:hover {
+                    cursor: pointer;
+                    scale: 1.2;
+                    opacity: .8;
+                }
+            }
+        }
+    }

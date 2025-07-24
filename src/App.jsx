@@ -3,15 +3,18 @@ import './App.scss';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
 import { NavBar } from './components/NavBar/NavBar';
-import { Hilsen } from './components/Hilsen/Hilsen';
-import { Liste } from './components/Liste/Liste';
-import { Button } from './components/Button/Button';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HomePage } from './pages/HomePage/HomePage';
-import { ConceptsPage } from './pages/ConceptsPage/ConceptsPage';
-import { AboutPage } from './pages/AboutPage/AboutPage';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AllePage } from './pages/AllePage/AllePage';
+import { IndlandPage } from './pages/IndlandPage/IndlandPage';
+import { UdlandPage } from './pages/UdlandPage/UdlandPage';
+import { TeknologiPage } from './pages/TeknologiPage/TeknologiPage';
+import { SportPage } from './pages/SportPage/SportPage';
+import { PolitikPage } from './pages/PolitikPage/PolitikPage';
+import { SamfundPage } from './pages/SamfundPage/SamfundPage';
+import { LoginPage } from "./pages/LoginPage/LoginPage";
+import ArticlePage from "./pages/ArticlePage/ArticlePage";
+
 import { ErrorPage } from './pages/ErrorPage/ErrorPage';
-import { ContactPage } from './pages/ContactPage/ContactPage';
 
 function App() {
 
@@ -19,24 +22,22 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-          {<NavBar />}
-          <main>
-            <Routes>
-              <Route index element={<HomePage />}/>
-              <Route path="/Koncepter" element={<ConceptsPage />}/>
-              <Route path="/about" element={<AboutPage />}/>
-              <Route path="*" element={<ErrorPage />}/>
-              <Route path="/kontaktOs" element={<ContactPage />}/>
-
-
-            </Routes>
-
-
-            <Hilsen navn="Mette" />
-            {/* <Liste titel="Mine Livretter" items={livretter} /> */}
-
-          </main>
-        {/* <Footer /> */}
+        <main>
+          <Routes>
+            <Route path="/" element={<Navigate to="/Alle" replace />} />
+            <Route path="/Alle" element={<AllePage />} />
+            <Route path="/Indland" element={<IndlandPage />} />
+            <Route path="/Udland" element={<UdlandPage />} />
+            <Route path="/Teknologi" element={<TeknologiPage />} />
+            <Route path="/Sport" element={<SportPage />} />
+            <Route path="/Politik" element={<PolitikPage />} />
+            <Route path="/Samfund" element={<SamfundPage />} />
+            <Route path="/Login" element={<LoginPage />} />
+            <Route path="/article/:id" element={<ArticlePage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </main>
+        <Footer />
       </BrowserRouter>
     </>
   );

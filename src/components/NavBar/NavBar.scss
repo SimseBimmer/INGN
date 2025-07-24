@@ -1,0 +1,40 @@
+@import '../../App.scss';
+
+nav {
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        margin: auto 0;
+
+        li {
+            margin: auto 0;
+
+            a {
+                text-decoration: none;
+                font-size: 32px;
+                font-family: 'Roboto Flex', sans-serif;
+                font-weight: 400;
+                color: #000000;
+                border-left: 2px solid #000000;
+                padding: 0 1rem;
+
+            }
+
+            a.active {
+                color: #C52525;
+                font-weight: 600;
+            }
+
+
+            &:last-child {
+                border-right: 2px solid #000000;
+
+            }
+
+        }
+    }
+}

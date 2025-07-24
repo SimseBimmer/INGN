@@ -1,13 +1,19 @@
 import { NavBar } from '../NavBar/NavBar'
-import styles from './header.module.scss'
-import { HeaderStyle } from './Header.styled'
+import { NavLink } from 'react-router-dom'
+
+import './header.scss'
 
 export const Header = () => {
-    return(
-        <HeaderStyle>
-            {/* <h1 className={styles.logo}>Velkommen</h1> */}
-            {/* <h2>til Vite + React</h2> */}
-            {/* <p>brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst </p> */}
-        </HeaderStyle>
+    return (
+        <header>
+            <div id='HeaderContainer'>
+                <h1 id='HeaderLogo'><NavLink to="/Alle">INGN</NavLink></h1>
+                <NavBar />
+                <div id="LoginMenu">
+                    <NavLink  to="/Login"><img src="/Login.svg" alt="Login" /></NavLink>
+                    <img src="/BurgerMenu.svg" alt="Login" />
+                </div>
+            </div>
+        </header>
     )
 }

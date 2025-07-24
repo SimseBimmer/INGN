@@ -1,0 +1,76 @@
+@import '../../App.scss';
+
+#loginPageContainer {
+    width: 50%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    height: 700px;
+    padding: 2rem;
+    margin: 3rem auto;
+
+    #loginFormContainer {
+        width: 50%;
+        margin: 0 auto;
+
+        h3 {
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        form {
+
+            .formGroup {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0.5rem 0;
+
+                label {
+                    font-family: 'Roboto Flex', sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #242424;
+                    margin-bottom: 0.5rem;
+                }
+
+                input {
+                    font-family: 'Roboto Flex', sans-serif;
+                    font-size: 18px;
+                    padding: .5rem;
+                    font-weight: 400;
+                    color: #242424;
+                    border: 3px solid #C52525;
+
+                    &:focus {
+                        border-color: #C52525;
+                        outline: none;
+                    }
+                }
+            }
+
+            button {
+                font-family: 'Roboto Flex', sans-serif;
+                font-size: 1.2rem;
+                padding: 1rem 4rem;
+                margin: 3rem 0 0 0;
+                font-weight: 400;
+                color: #242424;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                border: 3px solid #C52525;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    background-color: #A12323;
+                    color: #ffffff;
+                }
+
+            }
+        }
+    }
+}
